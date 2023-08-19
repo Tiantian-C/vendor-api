@@ -9,8 +9,6 @@ RUN npm install && npm install typescript -g
 
 COPY . .
 
-ENV NODE_ENV=production
-
 RUN tsc
 
 RUN mkdir -p ${FUNCTION_DIR}
