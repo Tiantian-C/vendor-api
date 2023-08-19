@@ -90,5 +90,5 @@ resource "aws_lambda_permission" "getvendors_permission" {
     action = "lambda:InvokeFunction"
     function_name = aws_lambda_function.getvendors.function_name
     principal = "apigateway.amazonaws.com"
-   // source_arn = "${aws_apigatewayv2_api.http_gw.execution_arn}/*/*"
+    source_arn = "${aws_apigatewayv2_api.http_gw.execution_arn}/*/*"
 }
