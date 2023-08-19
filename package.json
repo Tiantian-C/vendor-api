@@ -1,0 +1,17 @@
+{
+  "name": "vendor-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Tiantian-C/vendor-api.git",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/util-dynamodb": "^3.395.0",
+    "aws-sdk": "^2.1440.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.119",
+    "@types/node": "^20.5.1",
+    "typescript": "^5.1.6"
+  }
+}
