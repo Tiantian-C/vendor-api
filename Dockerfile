@@ -9,7 +9,7 @@ RUN npm install && npm install typescript -g
 
 COPY . .
 
-RUN yarn tsc
+RUN tsc
 
 RUN mkdir -p ${FUNCTION_DIR}
 
