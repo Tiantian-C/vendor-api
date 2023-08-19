@@ -101,7 +101,7 @@ jobs:
       - name: Setup Terraform 
         uses: hashicorp/setup-terraform@v2
         with:
-          terraform_version: 1.3.6
+          terraform_version: 1.5.5
           working-directory: ./terraform
 
       - name: Terraform fmt -check
