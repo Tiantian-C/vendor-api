@@ -4,6 +4,9 @@
   "main": "index.js",
   "repository": "git@github.com:Tiantian-C/vendor-api.git",
   "license": "MIT",
+  "scripts": {
+    "start": "node \"build/aws.js\""
+  },
   "dependencies": {
     "@aws-sdk/util-dynamodb": "^3.272.0",
     "aws-sdk": "^2.1317.0",
