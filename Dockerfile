@@ -1,5 +1,5 @@
 # Connect
-FROM amazon/aws-lambda-nodejs:12 AS connect
+FROM amazon/aws-lambda-nodejs:18 AS connect
 
 ARG FUNCTION_DIR="/var/task"
 
