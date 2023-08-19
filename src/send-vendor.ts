@@ -1,3 +1,5 @@
+/*send a message to all the users that we are connected(in the table)*/
+
 import { APIGatewayProxyResult, SQSEvent } from "aws-lambda";
 import AWS from "aws-sdk";
 import { broadcastMessageWebsocket, getAllScanResults, sqsDeleteMessage } from "./aws";
@@ -25,6 +27,7 @@ export const handler = async (event: SQSEvent): Promise<APIGatewayProxyResult> =
         }
     }
 
+    //get an array of  all the connectId 
     const dbRes = await getAllScanResults<{ connectionId: string }>(tableName);
     if (dbRes instanceof Error) {
         return {

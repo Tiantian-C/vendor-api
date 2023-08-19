@@ -1,3 +1,5 @@
+/*use dynamodbscan method to get records and return them to the user through API Gateway and AWS Lambda*/
+
 import { marshall, unmarshall } from "@aws-sdk/util-dynamodb";
 import { APIGatewayEvent, APIGatewayProxyResult } from "aws-lambda";
 import { AWSError, DynamoDB } from "aws-sdk";

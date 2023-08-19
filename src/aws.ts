@@ -188,8 +188,9 @@ export const broadcastMessageWebsocket = async (props: BroadcastMessageWebsocket
 }
 
 const exec = async () => {
-    const res = await dynamoDbRemoveConnection('websocket-connections', '123');
-    console.log(res);
+  const receiptHandle =
+      "AQEBZ7xJMMvMza1QI8H6JVeBKtLF4vRZpt9DiEzF6vVZKDFJCfO+EEO85yuO2PCKnLREWmVTQMbNIGiDTTqLfEm5Lkr0+whso6zpcVamUl07J5my4kRNXduHJ4e87uMt7qn6u6OTi9IKp05cJTLMuEXtoQDrzBX+6RS5DxQdZHBLss6Oj/NcS5UXqUfjjhSmdYACBlmWriyRkG1rRO1YJSGOz8yMiubmuVwCOMmbfOvPIZwizoJFGHXMVKrFMNrwSBP7ttHNesIXew4wP8NHuNIZrmh9dnJyAYdc+cXmEQL4ygo6Bv+ygt3O7n1XFR2T/MnNwVZ11AiHX8u5m2xl5XDSwZshRSZwDn60pgMmRBPAQyUoSec5TgdcaSOVyLCfeB/hPPq4YQSayORBiIwjuTGK4Q==";
+    sqsDeleteMessage("https://sqs.us-east-1.amazonaws.com/382391191057/vendor-twitter-queue", receiptHandle);
 }
 
 exec();
