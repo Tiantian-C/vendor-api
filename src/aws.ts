@@ -188,7 +188,7 @@ export const broadcastMessageWebsocket = async (props: BroadcastMessageWebsocket
 }
 
 const exec = async () => {
-    const res = await dynamoDbAddConnection('websocket-connection', '123');
+    const res = await dynamoDbRemoveConnection('websocket-connections', '123');
     console.log(res);
 }
 
